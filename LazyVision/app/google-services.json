@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "715295052712",
+    "firebase_url": "https://lazyvision-cd742.firebaseio.com",
+    "project_id": "lazyvision-cd742",
+    "storage_bucket": "lazyvision-cd742.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715295052712:android:1175fdd78e1b583e96c39d",
+        "android_client_info": {
+          "package_name": "com.example.lazyvision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715295052712-iqs2ehufb52peko4i8nac6iucepn3cbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyButsRIsn3GlXWzOv8RzQ0mDXugH20NCks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715295052712-iqs2ehufb52peko4i8nac6iucepn3cbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

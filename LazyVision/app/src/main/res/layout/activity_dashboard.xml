@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    tools:context=".Dashboard">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robobold"
+            android:textSize="25sp"
+            android:textColor="@color/orange"
+            android:text="@string/app_name"
+        android:layout_margin="30dp"
+        />
+
+    <com.google.android.material.circularreveal.CircularRevealGridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:layout_margin="5dp"
+        android:alignmentMode="alignMargins"
+        android:layout_gravity="center_horizontal"
+        android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/mediumgrey"
+                />
+
+        </com.google.android.material.circularreveal.CircularRevealGridLayout>
+</androidx.core.widget.NestedScrollView>
