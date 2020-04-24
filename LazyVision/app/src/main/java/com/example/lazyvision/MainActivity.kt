@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        val user = auth.currentUser
                         intent = Intent(this, Dashboard::class.java)
                         startActivity(intent)
                     } else {

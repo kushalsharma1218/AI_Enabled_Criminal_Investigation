@@ -10,6 +10,14 @@
     <string name="developedby">developed by LazyBeans</string>
     <string name="signup">Signup</string>
     <string name="alreadyhave">"already have an id ? Login."</string>
+    <string name="driving" />
+    <string name="train" />
+    <string name="walking" />
+    <string name="cycling" />
+    <string name="climbing" />
+    <string name="flight" />
+    <string name="todo" />
+
 
 
 </resources>
