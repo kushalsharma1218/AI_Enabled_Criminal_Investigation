@@ -8,22 +8,22 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/LOGO"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@mipmap/ic_launcher"
-            app:layout_constraintHorizontal_bias="0.497"
-
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/lazy"
             app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.192" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/haveid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/alreadyhave"
+            android:fontFamily="@font/robomedium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -39,6 +39,7 @@
             android:layout_height="50dp"
             android:textColor="@color/lightgrey"
             android:textSize="20sp"
+            android:fontFamily="@font/robomedium"
             android:background="@drawable/button1"
             android:text="@string/signup"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signup"
+            android:fontFamily="@font/robomedium"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +69,7 @@
             android:ems="10"
             android:hint="@string/prompt_email"
             android:textSize="20sp"
-            android:textColor="@color/lightgrey"
+            android:textColor="@color/darkgrey"
             android:background="@drawable/inputfield"
 
             android:inputType="textEmailAddress"
@@ -83,7 +85,7 @@
             android:ems="10"
             android:hint="@string/prompt_password"
             android:textSize="20sp"
-            android:textColor="@color/lightgrey"
+            android:textColor="@color/darkgrey"
             android:inputType="textPassword"
             android:background="@drawable/inputfield"
             app:layout_constraintBottom_toBottomOf="parent"

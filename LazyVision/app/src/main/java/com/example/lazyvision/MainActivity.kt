@@ -29,23 +29,44 @@ class MainActivity : AppCompatActivity() {
         noid.setOnClickListener({
             intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
+            finish()
         })
 
         auth = FirebaseAuth.getInstance()
 
         login.setOnClickListener({
-            auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        intent = Intent(this, Dashboard::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(baseContext, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show()
+            if(email.text.toString().isEmpty() ||  pass.text.toString().isEmpty()){
+                Toast.makeText(
+                    baseContext, "Invalid Credentials.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else {
+                auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            intent = Intent(this, Dashboard::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-
-                }
+            }
         })
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

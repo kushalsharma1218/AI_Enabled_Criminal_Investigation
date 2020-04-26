@@ -7,6 +7,11 @@
     <color name="orange">#ec566d</color>
     <color name="darkgrey">#333333</color>
     <color name="lightgrey">#f7f7f7</color>
-    <color name="mediumgrey">#DBDBDB</color>
+    <color name="mediumgrey">#dbdbdb</color>
+    <color name="lightblack">#5E5E5E</color>
+
+    <color name="black">#000000</color>
+
+    <color name="white">#FFFFFF</color>
 
 </resources>

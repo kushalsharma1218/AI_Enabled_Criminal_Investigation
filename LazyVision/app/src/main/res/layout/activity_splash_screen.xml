@@ -9,13 +9,13 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/LOGO"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
 
-        android:layout_height="300dp"
-        android:src="@mipmap/ic_launcher"
+        android:layout_height="400dp"
+        android:src="@drawable/lazy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44"></androidx.appcompat.widget.AppCompatImageView>
@@ -25,22 +25,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
+        android:fontFamily="@font/robomedium"
         android:text="@string/lazyvision"
-        android:textColor="@color/darkgrey"
-        android:textSize="25sp"
+        android:textColor="@color/lightblack"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <TextView
         android:id="@+id/developedby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/developedby"
-        android:textColor="@color/darkgrey"
+        android:textColor="@color/lightblack"
+        android:textSize="15sp"
+        android:fontFamily="@font/robolight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

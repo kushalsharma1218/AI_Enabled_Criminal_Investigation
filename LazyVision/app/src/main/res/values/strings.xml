@@ -3,12 +3,12 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in">LOGIN</string>
     <string name="donthave">"don't have an id ? Signup."</string>
-    <string name="login">"Login"</string>
+    <string name="login">"LOGIN"</string>
     <string name="lazyvision">LazyVision</string>
     <string name="developedby">developed by LazyBeans</string>
-    <string name="signup">Signup</string>
+    <string name="signup">SIGNUP</string>
     <string name="alreadyhave">"already have an id ? Login."</string>
     <string name="driving" />
     <string name="train" />
@@ -17,7 +17,16 @@
     <string name="climbing" />
     <string name="flight" />
     <string name="todo" />
-
+    <string name="ocr">OCR</string>
+    <string name="welcome">Welcome!</string>
+    <string name="youremail_lazyvision_com">youremail@lazyvision.in</string>
+    <string name="label_vision">LABEL VISION</string>
+    <string name="edge_vision">EDGE VISION</string>
+    <string name="place_vision">PLACE VISION</string>
+    <string name="text_vision">TEXT VISION</string>
+    <string name="object_vision">OBJECT VISION</string>
+    <string name="face_vision">FACE VISION</string>
+    <string name="logout">LOGOUT</string>
 
 
 </resources>

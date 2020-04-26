@@ -13,80 +13,117 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/robomedium"
-        android:text="@string/lazyvision"
+        android:text="@string/welcome"
+        android:textColor="@color/lightblack"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robomedium"
+        android:text="@string/youremail_lazyvision_com"
         android:textColor="@color/orange"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/textVision"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
 
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
                     android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
-                    android:textColor="#5E5E5E"
+                    android:text="@string/text_vision"
+                    android:textColor="@color/lightblack"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/ic_launcher"
-                    android:contentDescription="@string/todo" />
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset1" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/objectVision"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="18dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
 
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
                     android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
-                    android:textColor="#5E5E5E"
+                    android:text="@string/object_vision"
+                    android:textColor="@color/lightblack"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/ic_launcher"
-                    android:contentDescription="@string/todo" />
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset2" />
 
             </RelativeLayout>
 
@@ -102,80 +139,96 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/faceVision"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18sp" />
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="41dp"
-                    android:layout_marginBottom="38dp"
-                    android:contentDescription="@string/todo"
-                    android:src="@mipmap/ic_launcher" />
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/robomedium"
+                    android:text="@string/face_vision"
+                    android:textColor="@color/lightblack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset3" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/placeVision"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="18dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
 
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18sp" />
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="46dp"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="62dp"
-                    android:layout_marginBottom="34dp"
-                    android:contentDescription="@string/todo"
-                    android:src="@mipmap/ic_launcher" />
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/robomedium"
+                    android:text="@string/place_vision"
+                    android:textColor="@color/lightblack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset4" />
 
             </RelativeLayout>
 
@@ -192,34 +245,155 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/edgeVision"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
 
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
                     android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
+                    android:text="@string/edge_vision"
                     android:textColor="#5E5E5E"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/ic_launcher"
-                    android:contentDescription="@string/todo" />
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset2" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/labelVision"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/robomedium"
+                    android:text="@string/label_vision"
+                    android:textColor="@color/lightblack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset3" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/robomedium"
+                    android:text="@string/logout"
+                    android:textColor="@color/lightblack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset1" />
 
             </RelativeLayout>
 
@@ -230,31 +404,44 @@
             android:layout_height="150dp"
             android:layout_marginStart="18dp"
             android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/mediumgrey"
+                android:background="@color/white"
 
                 android:padding="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginBottom="1dp"
+                    android:textAlignment="center"
                     android:fontFamily="@font/robomedium"
-                    android:text="@string/lazyvision"
-                    android:textColor="#5E5E5E"
+                    android:text="@string/label_vision"
+                    android:textColor="@color/lightblack"
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/ic_launcher"
-                    android:contentDescription="@string/todo" />
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/ocr"
+                    android:src="@drawable/asset4" />
 
             </RelativeLayout>
 

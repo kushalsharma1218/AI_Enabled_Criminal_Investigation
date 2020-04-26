@@ -33,20 +33,30 @@ class SignupActivity : AppCompatActivity() {
         alreadyLogin.setOnClickListener({
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         })
 
         signup.setOnClickListener({
-            auth.createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        val user = auth.currentUser
-                        intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(baseContext, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show()
+            if(email.text.toString().isEmpty() ||  pass.text.toString().isEmpty()){
+                Toast.makeText(
+                    baseContext, "Invalid Credentials.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else {
+                auth.createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-                }
+            }
         })
 
     }
@@ -55,8 +65,9 @@ class SignupActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null) run {
-            intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, Dashboard::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
