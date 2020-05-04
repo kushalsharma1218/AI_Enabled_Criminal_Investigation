@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.File
 import java.util.concurrent.Executors
 
@@ -39,7 +40,7 @@ class CameraActivity : AppCompatActivity() {
         viewFinder = findViewById(R.id.view_finder)
         button = findViewById(R.id.button)
         val id=intent.getStringExtra("id")
-
+        label.setText(id.toString())
 
         if (allPermissionsGranted()) {
             viewFinder.post { startCamera() }
@@ -54,13 +55,27 @@ class CameraActivity : AppCompatActivity() {
 
         button.setOnClickListener(){
             val imageUri : Uri = Uri.fromFile(filex)
-            val intent = Intent(this@CameraActivity,TextVision::class.java)
-            intent.putExtra("imageUri", imageUri.toString());
-            startActivity(intent)
+            if(id.toString() == "objectVision"){
+                val intent = Intent(this@CameraActivity,ObjectVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString());
+                startActivity(intent)
+            }
+            else if(id.toString() == "textVision"){
+                val intent = Intent(this@CameraActivity,TextVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString());
+                startActivity(intent)
+            }else if(id.toString() == "labelVision"){
+                val intent = Intent(this@CameraActivity,LabelVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString());
+                startActivity(intent)
+            }else{
+                Toast.makeText(baseContext, "Wrong Option Selected", Toast.LENGTH_SHORT).show()
+            }
             finish()
         }
 
     }
+
 
     lateinit var filex: File
     fun setText(file: File){

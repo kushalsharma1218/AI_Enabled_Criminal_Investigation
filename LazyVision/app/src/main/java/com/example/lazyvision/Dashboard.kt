@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class Dashboard : AppCompatActivity() {
 
@@ -13,6 +14,8 @@ class Dashboard : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var logout: CardView
     private lateinit var textVision: CardView
+    private lateinit var labelVision: CardView
+    private lateinit var objectVision: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +27,15 @@ class Dashboard : AppCompatActivity() {
         email = findViewById(R.id.email)
         logout = findViewById(R.id.logout)
         textVision = findViewById(R.id.textVision)
+        objectVision = findViewById(R.id.objectVision)
+        labelVision = findViewById(R.id.labelVision)
 
+        objectVision.setOnClickListener({
+            intent = Intent(this, CameraActivity::class.java)
+            intent.putExtra("id","objectVision")
+            startActivity(intent)
+            finish()
+        })
 
         textVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
@@ -32,6 +43,15 @@ class Dashboard : AppCompatActivity() {
             startActivity(intent)
             finish()
         })
+
+        labelVision.setOnClickListener({
+            intent = Intent(this, CameraActivity::class.java)
+            intent.putExtra("id","labelVision")
+            startActivity(intent)
+            finish()
+        })
+
+
 
         logout.setOnClickListener({
             auth.signOut()
