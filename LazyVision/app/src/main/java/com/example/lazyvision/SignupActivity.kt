@@ -65,7 +65,7 @@ class SignupActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null) run {
-            intent = Intent(this, Dashboard::class.java)
+            intent = Intent(this, CaseNo::class.java)
             startActivity(intent)
             finish()
         }

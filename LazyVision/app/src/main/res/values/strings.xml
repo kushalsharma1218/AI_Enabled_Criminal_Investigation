@@ -27,6 +27,15 @@
     <string name="object_vision">OBJECT VISION</string>
     <string name="face_vision">FACE VISION</string>
     <string name="logout">LOGOUT</string>
+    <string name="case_no">Case No.</string>
+    <string name="_001idr060520">001IDR060520</string>
+    <string name="status">Status</string>
+    <string name="active">Active</string>
+    <string name="investigating_off">Investigating Off.</string>
+    <string name="ins_aditya_trivedi">Ins. Aditya Trivedi</string>
+    <string name="qq">################</string>
+    <string name="qqq">################</string>
+    <string name="qqqq">######</string>
 
 
 </resources>

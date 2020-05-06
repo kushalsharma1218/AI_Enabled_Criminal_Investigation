@@ -13,9 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LabelVision"
+        <activity
+            android:name=".CaseNo"
+            android:label="CaseNo"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LabelVision"
             android:label="LabelVision"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ObjectVision"
             android:label="ObjectVision"
