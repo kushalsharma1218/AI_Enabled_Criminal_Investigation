@@ -30,12 +30,15 @@ class TextVision : AppCompatActivity() {
 
 
         val myUriString = intent.getStringExtra("imageUri")
+        val cno = intent.getStringExtra("caseno")
+
 
         vision_text = findViewById(R.id.vision_text)
         home = findViewById(R.id.home)
         again = findViewById(R.id.again)
         text = findViewById(R.id.text)
         showImage = findViewById(R.id.showImage)
+        mycaseno.text = cno.toString()
 
         text.setOnClickListener({
             imageView.isVisible = false

@@ -13,6 +13,7 @@ import android.view.TextureView
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
@@ -32,14 +33,18 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var button: Button
     private val executor = Executors.newSingleThreadExecutor()
     private lateinit var viewFinder: TextureView
+    private lateinit var mycase: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
 
         viewFinder = findViewById(R.id.view_finder)
+        mycase = findViewById(R.id.mycase)
         button = findViewById(R.id.button)
         val id=intent.getStringExtra("id")
+        val mycaseno = intent.getStringExtra("caseno")
+        mycase.setText(mycaseno.toString())
         label.setText(id.toString())
 
         if (allPermissionsGranted()) {
@@ -57,16 +62,22 @@ class CameraActivity : AppCompatActivity() {
             val imageUri : Uri = Uri.fromFile(filex)
             if(id.toString() == "objectVision"){
                 val intent = Intent(this@CameraActivity,ObjectVision::class.java)
-                intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("imageUri", imageUri.toString())
+                intent.putExtra("caseno",mycaseno.toString())
+
                 startActivity(intent)
             }
             else if(id.toString() == "textVision"){
                 val intent = Intent(this@CameraActivity,TextVision::class.java)
                 intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",mycaseno.toString())
+
                 startActivity(intent)
             }else if(id.toString() == "labelVision"){
                 val intent = Intent(this@CameraActivity,LabelVision::class.java)
                 intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",mycaseno.toString())
+
                 startActivity(intent)
             }else{
                 Toast.makeText(baseContext, "Wrong Option Selected", Toast.LENGTH_SHORT).show()
