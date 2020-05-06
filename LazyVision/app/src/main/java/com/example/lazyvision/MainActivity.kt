@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            intent = Intent(this, CaseNo::class.java)
+                            intent = Intent(this, CaseActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
         if(currentUser != null){
-            intent = Intent(this, CaseNo::class.java)
+            intent = Intent(this, CaseActivity::class.java)
             startActivity(intent)
             finish()
         }

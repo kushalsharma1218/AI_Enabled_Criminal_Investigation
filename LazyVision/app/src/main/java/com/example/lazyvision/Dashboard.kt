@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_dashboard.*
 class Dashboard : AppCompatActivity() {
 
     private lateinit var email: TextView
+    private lateinit var caseno: TextView
     private lateinit var auth: FirebaseAuth
     private lateinit var logout: CardView
     private lateinit var textVision: CardView
@@ -21,14 +22,18 @@ class Dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+        val cno = intent.getStringExtra("caseno")
         auth = FirebaseAuth.getInstance()
 
 
         email = findViewById(R.id.email)
+        caseno = findViewById(R.id.caseno)
         logout = findViewById(R.id.logout)
         textVision = findViewById(R.id.textVision)
         objectVision = findViewById(R.id.objectVision)
         labelVision = findViewById(R.id.labelVision)
+        caseno.text = cno.toString()
+
 
         objectVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)

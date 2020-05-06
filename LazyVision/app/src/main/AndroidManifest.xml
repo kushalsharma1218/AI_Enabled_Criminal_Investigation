@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CaseNo"
-            android:label="CaseNo"
+            android:name=".CaseActivity"
+            android:label="CaseActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".LabelVision"
