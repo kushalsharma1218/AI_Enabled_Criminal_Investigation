@@ -17,6 +17,7 @@ class Dashboard : AppCompatActivity() {
     private lateinit var textVision: CardView
     private lateinit var labelVision: CardView
     private lateinit var objectVision: CardView
+    private lateinit var showdata: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class Dashboard : AppCompatActivity() {
         textVision = findViewById(R.id.textVision)
         objectVision = findViewById(R.id.objectVision)
         labelVision = findViewById(R.id.labelVision)
+        showdata = findViewById(R.id.showall)
         caseno.text = cno.toString()
 
 
@@ -69,6 +71,15 @@ class Dashboard : AppCompatActivity() {
             startActivity(intent)
             finish()
         })
+
+        showdata.setOnClickListener({
+            intent = Intent(this, ShowAllData::class.java)
+            intent.putExtra("id","showalldata")
+            intent.putExtra("caseno",cno.toString())
+            startActivity(intent)
+            finish()
+        })
+
 
         val currentUser = auth.currentUser
         if (currentUser != null) {
