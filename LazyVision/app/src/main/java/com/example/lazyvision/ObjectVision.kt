@@ -24,8 +24,6 @@ class ObjectVision : AppCompatActivity() {
     private lateinit var again: Button
 
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_object_vision)

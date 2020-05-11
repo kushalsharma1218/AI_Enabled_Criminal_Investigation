@@ -9,12 +9,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.*
+
 
 class CaseActivity : AppCompatActivity() {
 
@@ -30,7 +26,7 @@ class CaseActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         email = findViewById(R.id.email)
-        database = Firebase.database.reference
+        database = FirebaseDatabase.getInstance().reference;
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
