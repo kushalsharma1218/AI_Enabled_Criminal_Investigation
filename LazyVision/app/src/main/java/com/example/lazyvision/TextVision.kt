@@ -82,7 +82,7 @@ class TextVision : AppCompatActivity() {
 
                 var ref=FirebaseDatabase.getInstance().getReference("caseno/c101/evidence/")
                 var TextToFireBaseBeanClass=TextDataFromFirebase(imgUrl.toString(),resultText);
-                ref.child("textVision").push().setValue(TextToFireBaseBeanClass)
+                ref.child("textVision").setValue(TextToFireBaseBeanClass)
                     .addOnCompleteListener{
                         Log.e("DONE FOR NOW","GO TO SLEEP");
                     }
