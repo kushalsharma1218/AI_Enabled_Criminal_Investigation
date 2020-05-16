@@ -1,33 +1,37 @@
 package com.example.lazyvision
 
 import android.Manifest
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Bundle
+<<<<<<< HEAD
 import android.provider.MediaStore
+=======
+>>>>>>> parent of ec3103e... Add files via upload
 import android.util.Log
 import android.util.Size
 import android.view.Surface
 import android.view.TextureView
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+<<<<<<< HEAD
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import id.zelory.compressor.Compressor.compress
 import id.zelory.compressor.constraint.*
+=======
+>>>>>>> parent of ec3103e... Add files via upload
 import kotlinx.android.synthetic.main.activity_camera.*
-import java.io.ByteArrayOutputStream
 import java.io.File
-import java.util.*
 import java.util.concurrent.Executors
 
 
@@ -41,17 +45,11 @@ class CameraActivity : AppCompatActivity() {
     private val executor = Executors.newSingleThreadExecutor()
     private lateinit var viewFinder: TextureView
     private lateinit var mycase: TextView
-    private lateinit var mbitmap: Bitmap
-
-    internal var downloadingurl:String?=null
-    internal  var storage:FirebaseStorage?=null
-    internal  var storageReference:StorageReference?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
-        storage= FirebaseStorage.getInstance()
-        storageReference=storage!!.reference
+
         viewFinder = findViewById(R.id.view_finder)
         mycase = findViewById(R.id.mycase)
         button = findViewById(R.id.button)
@@ -73,65 +71,29 @@ class CameraActivity : AppCompatActivity() {
 
         button.setOnClickListener(){
             val imageUri : Uri = Uri.fromFile(filex)
-            mbitmap=MediaStore.Images.Media.getBitmap(contentResolver,imageUri)
-            var compressedbitmap=compressBitmap(mbitmap,10)
-            Log.e("BUTMAP......................",compressedbitmap.toString())
+            if(id.toString() == "objectVision"){
+                val intent = Intent(this@CameraActivity,ObjectVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString())
+                intent.putExtra("caseno",mycaseno.toString())
 
-            val IMGURI=getImageUriFromBitmap(applicationContext,compressedbitmap)
+                startActivity(intent)
+            }
+            else if(id.toString() == "textVision"){
+                val intent = Intent(this@CameraActivity,TextVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",mycaseno.toString())
 
-                var path="images/"+UUID.randomUUID().toString()
-                var fileRef=storageReference!!.child(path)
-                val uploadTask = fileRef.putFile(IMGURI!!)
-                uploadTask.continueWith {
-                    if (!it.isSuccessful) {
-                        it.exception?.let { t ->
-                            throw t
-                        }
-                    }
+                startActivity(intent)
+            }else if(id.toString() == "labelVision"){
+                val intent = Intent(this@CameraActivity,LabelVision::class.java)
+                intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",mycaseno.toString())
 
-                    fileRef.downloadUrl
-                }.addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        it.result!!.addOnSuccessListener { task ->
-                            downloadingurl = task.toString()
-
-
-
-                if(id.toString() == "objectVision"){
-                    val intent = Intent(this@CameraActivity,ObjectVision::class.java)
-                    intent.putExtra("imageUri", imageUri.toString())
-                    intent.putExtra("caseno",mycaseno.toString())
-                    intent.putExtra("imageUrl",downloadingurl.toString())
-
-                    startActivity(intent)
-                }
-                else if(id.toString() == "textVision") {
-                    val intent = Intent(this@CameraActivity, TextVision::class.java)
-                    // This method will be executed once the timer is over
-                    intent.putExtra("imageUri", imageUri.toString());
-                    intent.putExtra("caseno", mycaseno.toString())
-                    intent.putExtra(
-                        "imageUrl",
-                               downloadingurl.toString()
-                    )
-                    startActivity(intent)
-
-
-                }else if(id.toString() == "labelVision"){
-                    val intent = Intent(this@CameraActivity,LabelVision::class.java)
-                    intent.putExtra("imageUri", imageUri.toString());
-                    intent.putExtra("caseno",mycaseno.toString())
-                    intent.putExtra("imageUrl",downloadingurl)
-                    startActivity(intent)
-                }else{
-                    Toast.makeText(baseContext, "Wrong Option Selected", Toast.LENGTH_SHORT).show()
-                }
-                finish()
-
-                        }
-                    }
-                }
-
+                startActivity(intent)
+            }else{
+                Toast.makeText(baseContext, "Wrong Option Selected", Toast.LENGTH_SHORT).show()
+            }
+            finish()
         }
 
     }
@@ -250,58 +212,10 @@ class CameraActivity : AppCompatActivity() {
             }
         }
     }
-    private fun compressBitmap(bitmap:Bitmap, quality:Int):Bitmap{
-        // Initialize a new ByteArrayStream
-        val stream = ByteArrayOutputStream()
 
-        /*
-            **** reference source developer.android.com ***
-
-            public boolean compress (Bitmap.CompressFormat format, int quality, OutputStream stream)
-                Write a compressed version of the bitmap to the specified outputstream.
-                If this returns true, the bitmap can be reconstructed by passing a
-                corresponding inputstream to BitmapFactory.decodeStream().
-
-                Note: not all Formats support all bitmap configs directly, so it is possible
-                that the returned bitmap from BitmapFactory could be in a different bitdepth,
-                and/or may have lost per-pixel alpha (e.g. JPEG only supports opaque pixels).
-
-                Parameters
-                format : The format of the compressed image
-                quality : Hint to the compressor, 0-100. 0 meaning compress for small size,
-                    100 meaning compress for max quality. Some formats,
-                    like PNG which is lossless, will ignore the quality setting
-                stream: The outputstream to write the compressed data.
-
-                Returns
-                    true if successfully compressed to the specified stream.
-
-
-            Bitmap.CompressFormat
-                Specifies the known formats a bitmap can be compressed into.
-
-                    Bitmap.CompressFormat  JPEG
-                    Bitmap.CompressFormat  PNG
-                    Bitmap.CompressFormat  WEBP
-        */
-
-        // Compress the bitmap with JPEG format and quality 50%
-        bitmap.compress(Bitmap.CompressFormat.JPEG, quality, stream)
-
-        val byteArray = stream.toByteArray()
-
-        // Finally, return the compressed bitmap
-        return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-    }
-
-    @Suppress("DEPRECATION")
-    fun getImageUriFromBitmap(context: Context, bitmap: Bitmap): Uri{
-        val bytes = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-        val path = MediaStore.Images.Media.insertImage(context.contentResolver, bitmap, "Title", null)
-        Log.e("Path",path.toString())
-        return Uri.parse(path.toString())
-    }
+    /**
+     * Check if all permission specified in the manifest have been granted
+     */
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(
             baseContext, it) == PackageManager.PERMISSION_GRANTED

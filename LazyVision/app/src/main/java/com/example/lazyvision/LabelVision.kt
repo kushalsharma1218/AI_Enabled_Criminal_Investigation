@@ -2,20 +2,21 @@ package com.example.lazyvision
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
+import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions
+import kotlinx.android.synthetic.main.activity_label_vision.*
+import kotlinx.android.synthetic.main.activity_text_vision.*
 import kotlinx.android.synthetic.main.activity_text_vision.imageView
 import kotlinx.android.synthetic.main.activity_text_vision.mycaseno
-import java.util.zip.DataFormatException
 
 class LabelVision : AppCompatActivity() {
     private lateinit var vision_text: TextView
@@ -34,7 +35,7 @@ class LabelVision : AppCompatActivity() {
 
         val myUriString = intent.getStringExtra("imageUri")
         val cno = intent.getStringExtra("caseno")
-        val  imgUrl = intent.getStringExtra("imageUrl")
+
 
         vision_text = findViewById(R.id.vision_text)
         home = findViewById(R.id.home)
@@ -87,14 +88,6 @@ class LabelVision : AppCompatActivity() {
                     st+="%\n"
                 }
                 vision_text.setText(st)
-
-                var ref= FirebaseDatabase.getInstance().getReference("caseno/c101/evidence/")
-                var TextToFireBaseBeanClass=TextDataFromFirebase(imgUrl.toString(),st);
-                ref.child("labelVision").push().setValue(TextToFireBaseBeanClass)
-                    .addOnCompleteListener{
-                        Log.e("DONE FOR NOW","GO TO SLEEP");
-                    }
-
             }
             .addOnFailureListener { e ->
                 vision_text.setText(e.toString())
