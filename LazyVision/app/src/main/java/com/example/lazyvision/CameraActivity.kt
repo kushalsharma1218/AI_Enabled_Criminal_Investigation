@@ -6,10 +6,8 @@ import android.content.pm.PackageManager
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Bundle
-<<<<<<< HEAD
 import android.provider.MediaStore
-=======
->>>>>>> parent of ec3103e... Add files via upload
+
 import android.util.Log
 import android.util.Size
 import android.view.Surface
@@ -23,13 +21,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-<<<<<<< HEAD
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import id.zelory.compressor.Compressor.compress
-import id.zelory.compressor.constraint.*
-=======
->>>>>>> parent of ec3103e... Add files via upload
 import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.File
 import java.util.concurrent.Executors
