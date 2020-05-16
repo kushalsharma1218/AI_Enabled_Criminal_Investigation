@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowAlldataActivity"></activity>
+        <activity android:name=".Evidence"></activity>
+        <activity android:name=".ShowAlldataActivity" />
         <activity android:name=".Item" />
         <activity android:name=".ShowAllData" />
         <activity android:name=".ProgressBar" />

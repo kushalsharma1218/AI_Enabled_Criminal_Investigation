@@ -7,11 +7,8 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
-import android.os.AsyncTask
 import android.os.Bundle
-import android.os.Handler
 import android.provider.MediaStore
 import android.util.Log
 import android.util.Size
@@ -21,10 +18,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.lazyvision.ProgressBar
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import id.zelory.compressor.Compressor.compress
@@ -34,7 +29,6 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.util.*
 import java.util.concurrent.Executors
-import kotlin.system.measureTimeMillis
 
 
 private const val REQUEST_CODE_PERMISSIONS = 10
