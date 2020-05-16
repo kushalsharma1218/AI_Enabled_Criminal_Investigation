@@ -13,22 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <activity android:name=".Evidence"></activity>
-        <activity android:name=".ShowAlldataActivity" />
-        <activity android:name=".Item" />
-=======
-        <activity android:name=".Item"></activity>
->>>>>>> parent of 17ed71a... Merge pull request #2 from kushal0074/master
-=======
-        <activity android:name=".Item"></activity>
->>>>>>> parent of e78e28a... Add files via upload
-        <activity android:name=".ShowAllData" />
-        <activity android:name=".ProgressBar" />
-=======
->>>>>>> parent of ec3103e... Add files via upload
+
         <activity
             android:name=".CaseActivity"
             android:label="CaseActivity"

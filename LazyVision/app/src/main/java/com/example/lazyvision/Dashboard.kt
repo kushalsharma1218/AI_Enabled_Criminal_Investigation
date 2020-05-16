@@ -70,6 +70,16 @@ class Dashboard : AppCompatActivity() {
             finish()
         })
 
+
+        showdata.setOnClickListener({
+            intent = Intent(this, ShowAllData::class.java)
+            intent.putExtra("id","showalldata")
+            intent.putExtra("caseno",cno.toString())
+            startActivity(intent)
+            finish()
+        })
+
+
         val currentUser = auth.currentUser
         if (currentUser != null) {
             email.setText(currentUser.email)

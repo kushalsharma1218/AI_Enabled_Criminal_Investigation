@@ -75,6 +75,18 @@ class TextVision : AppCompatActivity() {
             .addOnSuccessListener { firebaseVisionText ->
                 val resultText = firebaseVisionText.text
                 vision_text.setText(resultText)
+<<<<<<< HEAD
+=======
+
+
+                var ref=FirebaseDatabase.getInstance().getReference("caseno/c101/evidence/")
+                var TextToFireBaseBeanClass=TextDataFromFirebase(imgUrl.toString(),resultText);
+                ref.child("textVision").setValue(TextToFireBaseBeanClass)
+                    .addOnCompleteListener{
+                        Log.e("DONE FOR NOW","GO TO SLEEP");
+                    }
+
+>>>>>>> parent of 17ed71a... Merge pull request #2 from kushal0074/master
             }
             .addOnFailureListener { e ->
                 vision_text.setText("ERROR!!")
