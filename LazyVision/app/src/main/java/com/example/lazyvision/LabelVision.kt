@@ -13,10 +13,7 @@ import androidx.core.view.isVisible
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions
-import kotlinx.android.synthetic.main.activity_label_vision.*
 import kotlinx.android.synthetic.main.activity_text_vision.*
-import kotlinx.android.synthetic.main.activity_text_vision.imageView
-import kotlinx.android.synthetic.main.activity_text_vision.mycaseno
 
 class LabelVision : AppCompatActivity() {
     private lateinit var vision_text: TextView
@@ -34,15 +31,12 @@ class LabelVision : AppCompatActivity() {
 
 
         val myUriString = intent.getStringExtra("imageUri")
-        val cno = intent.getStringExtra("caseno")
-
 
         vision_text = findViewById(R.id.vision_text)
         home = findViewById(R.id.home)
         again = findViewById(R.id.again)
         text = findViewById(R.id.text)
         showImage = findViewById(R.id.showImage)
-        mycaseno.text = cno.toString()
 
         text.setOnClickListener({
             imageView.isVisible = false

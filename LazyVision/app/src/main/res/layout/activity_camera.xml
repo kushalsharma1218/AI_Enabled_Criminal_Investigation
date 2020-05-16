@@ -9,13 +9,14 @@
 
     <TextureView
         android:id="@+id/view_finder"
-        android:layout_width="405dp"
-        android:layout_height="559dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
 
     <ImageButton
         android:id="@+id/capture_button"
@@ -29,8 +30,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_finder"
-        app:layout_constraintVertical_bias="0.644"
-        android:contentDescription="TODO" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
@@ -41,11 +41,10 @@
         android:text="@string/lazyvision"
         android:textAlignment="center"
         android:textColor="@color/lightgrey"
-        android:textSize="30sp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/view_finder"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="133dp" />
 
     <Button
         android:id="@+id/button"
@@ -55,43 +54,25 @@
         android:background="@drawable/lazy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/view_finder"
-        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_finder"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_marginBottom="12dp"
+        android:text="TextView"
         android:fontFamily="@font/robomedium"
-        android:text="@string/qqq"
         android:textAlignment="center"
-        android:textColor="@color/orange"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/view_finder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:fontFamily="@font/robomedium"
-        android:id="@+id/mycase"
-        android:layout_marginTop="7dp"
-        android:textSize="24sp"
         android:textColor="@color/lightgrey"
-        android:layout_marginBottom="11dp"
-        android:text="@string/qqq"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/view_finder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

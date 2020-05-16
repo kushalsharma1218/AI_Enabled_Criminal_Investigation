@@ -38,7 +38,6 @@ class Dashboard : AppCompatActivity() {
         objectVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
             intent.putExtra("id","objectVision")
-            intent.putExtra("caseno",cno.toString())
             startActivity(intent)
             finish()
         })
@@ -46,8 +45,6 @@ class Dashboard : AppCompatActivity() {
         textVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
             intent.putExtra("id","textVision")
-            intent.putExtra("caseno",cno.toString())
-
             startActivity(intent)
             finish()
         })
@@ -55,8 +52,6 @@ class Dashboard : AppCompatActivity() {
         labelVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
             intent.putExtra("id","labelVision")
-            intent.putExtra("caseno",cno.toString())
-
             startActivity(intent)
             finish()
         })
