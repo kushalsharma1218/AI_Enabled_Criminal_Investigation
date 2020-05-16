@@ -73,7 +73,7 @@ class Dashboard : AppCompatActivity() {
         })
 
         showdata.setOnClickListener({
-            intent = Intent(this, ShowAllData::class.java)
+            intent = Intent(this, ShowAlldataActivity::class.java)
             intent.putExtra("id","showalldata")
             intent.putExtra("caseno",cno.toString())
             startActivity(intent)
