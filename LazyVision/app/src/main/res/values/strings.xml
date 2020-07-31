@@ -36,6 +36,8 @@
     <string name="qq">################</string>
     <string name="qqq">################</string>
     <string name="qqqq">######</string>
+    <string name="recognized_text_will_be_shown_here">Recognized Text will be shown here!</string>
+    <string name="genrate_certificate">GENRATE CERTIFICATE</string>
 
 
 </resources>

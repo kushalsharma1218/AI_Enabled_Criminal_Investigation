@@ -33,18 +33,13 @@ class Dashboard : AppCompatActivity() {
         objectVision = findViewById(R.id.objectVision)
         labelVision = findViewById(R.id.labelVision)
         caseno.text = cno.toString()
+        val currentUser = auth.currentUser
 
-
-        objectVision.setOnClickListener({
-            intent = Intent(this, CameraActivity::class.java)
-            intent.putExtra("id","objectVision")
-            startActivity(intent)
-            finish()
-        })
 
         textVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
             intent.putExtra("id","textVision")
+            intent.putExtra("caseno",cno.toString())
             startActivity(intent)
             finish()
         })
@@ -52,11 +47,17 @@ class Dashboard : AppCompatActivity() {
         labelVision.setOnClickListener({
             intent = Intent(this, CameraActivity::class.java)
             intent.putExtra("id","labelVision")
+            intent.putExtra("caseno",cno.toString())
             startActivity(intent)
             finish()
         })
 
-
+        database.setOnClickListener({
+            intent = Intent(this, EvidenceActivity::class.java)
+            intent.putExtra("caseno",cno.toString())
+            startActivity(intent)
+            finish()
+        })
 
         logout.setOnClickListener({
             auth.signOut()
@@ -66,16 +67,8 @@ class Dashboard : AppCompatActivity() {
         })
 
 
-        showdata.setOnClickListener({
-            intent = Intent(this, ShowAllData::class.java)
-            intent.putExtra("id","showalldata")
-            intent.putExtra("caseno",cno.toString())
-            startActivity(intent)
-            finish()
-        })
 
 
-        val currentUser = auth.currentUser
         if (currentUser != null) {
             email.setText(currentUser.email)
         }

@@ -44,7 +44,9 @@ class CameraActivity : AppCompatActivity() {
         viewFinder = findViewById(R.id.view_finder)
         button = findViewById(R.id.button)
         val id=intent.getStringExtra("id")
+        val cno = intent.getStringExtra("caseno")
         label.setText(id.toString())
+        caseno.text=cno.toString()
 
         if (allPermissionsGranted()) {
             viewFinder.post { startCamera() }
@@ -59,18 +61,16 @@ class CameraActivity : AppCompatActivity() {
 
         button.setOnClickListener(){
             val imageUri : Uri = Uri.fromFile(filex)
-            if(id.toString() == "objectVision"){
-                val intent = Intent(this@CameraActivity,ObjectVision::class.java)
-                intent.putExtra("imageUri", imageUri.toString());
-                startActivity(intent)
-            }
-            else if(id.toString() == "textVision"){
+            if(id.toString() == "textVision"){
                 val intent = Intent(this@CameraActivity,TextVision::class.java)
                 intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",cno.toString())
+
                 startActivity(intent)
             }else if(id.toString() == "labelVision"){
                 val intent = Intent(this@CameraActivity,LabelVision::class.java)
                 intent.putExtra("imageUri", imageUri.toString());
+                intent.putExtra("caseno",cno.toString())
                 startActivity(intent)
             }else{
                 Toast.makeText(baseContext, "Wrong Option Selected", Toast.LENGTH_SHORT).show()
@@ -85,9 +85,6 @@ class CameraActivity : AppCompatActivity() {
     fun setText(file: File){
         this.filex = file
     }
-
-
-
 
     private fun startCamera() {
 

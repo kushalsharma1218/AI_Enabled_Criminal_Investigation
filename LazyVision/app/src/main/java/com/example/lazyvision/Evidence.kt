@@ -1,12 +1,11 @@
 package com.example.lazyvision
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.google.firebase.database.IgnoreExtraProperties
 
-class Evidence : AppCompatActivity() {
+@IgnoreExtraProperties
+data class Evidence(
+    var result: String = "",
+    var imgurl: String = "",
+    var label: String = ""
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_evidence)
-    }
-}
+)

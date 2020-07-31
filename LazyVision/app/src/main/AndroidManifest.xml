@@ -13,8 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Evidence"></activity>
-
         <activity
             android:name=".CaseActivity"
             android:label="CaseActivity"
@@ -24,8 +22,8 @@
             android:label="LabelVision"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ObjectVision"
-            android:label="ObjectVision"
+            android:name=".EvidenceActivity"
+            android:label="EvidenceActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TextVision"

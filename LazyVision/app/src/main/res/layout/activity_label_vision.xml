@@ -11,21 +11,23 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/robomedium"
         android:text="@string/lazyvision"
 
         android:textAlignment="center"
         android:textColor="@color/lightblack"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
 
     <EditText
         android:id="@+id/vision_text"
-        android:layout_width="366dp"
-        android:layout_height="626dp"
+        android:layout_width="364dp"
+        android:layout_height="552dp"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/robolight"
         android:text="Recognized Text will be shown here!"
@@ -34,13 +36,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <Button
         android:id="@+id/again"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +55,11 @@
         android:id="@+id/text"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_bias="0.216" />
@@ -66,7 +68,7 @@
         android:id="@+id/home"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +81,7 @@
         android:id="@+id/showImage"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +94,6 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/robomedium"
         android:text="LABEL VISION"
@@ -111,9 +112,26 @@
         android:layout_height="604dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/caseno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/robomedium"
+        android:text="@string/qq"
+        android:textAlignment="center"
+        android:textColor="@color/lightblack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

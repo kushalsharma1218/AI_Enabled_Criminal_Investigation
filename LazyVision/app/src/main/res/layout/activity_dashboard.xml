@@ -264,7 +264,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/edgeVision"
+                    android:id="@+id/database"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
@@ -288,7 +288,7 @@
                             android:layout_marginTop="112dp"
                             android:layout_marginBottom="1dp"
                             android:fontFamily="@font/robomedium"
-                            android:text="@string/edge_vision"
+                            android:text="DATABASE"
                             android:textAlignment="center"
                             android:textColor="#5E5E5E"
                             android:textSize="18sp" />
